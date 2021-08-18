@@ -182,6 +182,12 @@ SELECT CompanyName as Name, City, 'Suppier' as Type
 FROM Suppliers
 
 --28
+CREATE TABLE T1(F1 int primary key)
+INSERT INTO T1 VALUES (1), (2), (3)
+
+CREATE TABLE T2(F2 int primary key)
+INSERT INTO T2 VALUES (2), (3), (4)
+
 SELECT T1.F1
 FROM T1 JOIN T2 ON T1.F1 = T2.F2
 
