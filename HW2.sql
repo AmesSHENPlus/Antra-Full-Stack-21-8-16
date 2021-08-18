@@ -184,19 +184,23 @@ FROM Suppliers
 SELECT T1.F1
 FROM T1 JOIN T2 ON T1.F1 = T2.F2
 
---result:
---T1.F1  T2.F2
+/*
+result:
+T1.F1 | T2.F2
 --------------
---  2      2
---  3      3
+  2   |   2
+  3   |   3
+*/
 
 --29
 SELECT T1.F1
 FROM T1 LEFT JOIN T2 ON T1.F1 = T2.F2
 
---result:
---T1.F1   T2.F2
+/*
+result:
+T1.F1 | T2.F2
 ---------------
---  1     NULL
---  2      2
---  3      3
+  1   |  NULL
+  2   |  2
+  3   |  3
+*/
