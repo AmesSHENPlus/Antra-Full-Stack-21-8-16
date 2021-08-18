@@ -108,6 +108,7 @@ WHERE year(getDate()) - year(o.OrderDate) < 25
 --15
 SELECT TOP 5 ShipPostalCode
 FROM Orders
+WHERE ShipPostalCode IS NOT NULL
 GROUP BY ShipPostalCode
 ORDER BY COUNT(*) DESC
 
